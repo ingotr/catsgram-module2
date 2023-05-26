@@ -19,7 +19,8 @@ public class PostController {
     }
 
     @PostMapping(value = "/post")
-    public void create(@RequestBody Post post) {
+    public Post create(@RequestBody Post post) {
         posts.add(post);
+        return post;
     }
 }
